@@ -1,3 +1,6 @@
+#ifndef MATRIX_H
+#define MATRIX_H
+
 #pragma once
 #include <iostream>
 #include <fstream>
@@ -16,6 +19,9 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
+/**
+ * This is a structure of dimension of a matrix row and column
+*/
 struct Dim
 {
 	size_t row = 0;
@@ -49,3 +55,5 @@ public:
 
 	void writeFile(string data);
 };
+
+#endif

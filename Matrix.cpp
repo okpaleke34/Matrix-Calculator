@@ -211,7 +211,7 @@ vector<vector<int>> Matrix::transpose(vector<vector<int>> matrix, int type)
 	if (this->verify(matrix))
 	{
 		struct Dim dim = this->dimension(matrix);
-		double tran[10][10];
+		double tran[MAX][MAX];
 		for (int i = 0; i < dim.row; ++i)
 		{
 			for (int j = 0; j < dim.column; ++j)
@@ -241,7 +241,6 @@ vector<vector<int>> Matrix::transpose(vector<vector<int>> matrix, int type)
 	return transpose;
 }
 /*
- * 
  * @param matrix is the square matrix to get its cofactor
  * @param p is the row minor
  * @param q is the column minor
@@ -257,7 +256,7 @@ vector<vector<int>> Matrix::cofactor(vector<vector<int>> matrix, int p, int q)
 			int i = 0, j = 0;
 			struct Dim dim = this->dimension(matrix);
 			size_t n = dim.row;
-			int temp[10][10];
+			int temp[MAX][MAX];
 			// Looping for each element of the matrix
 			for (int row = 0; row < n; row++)
 			{
